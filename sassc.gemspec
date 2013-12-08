@@ -1,6 +1,8 @@
 # -*- encoding: utf-8 -*-
 #require File.expand_path('../lib/sassc', __FILE__)
 
+`git submodule update --init`
+
 $gemspec = Gem::Specification.new do |gem|
   gem.name          = "sassc"
   gem.authors       = ["Hampton Catlin", "Aaron Leung"]
@@ -16,8 +18,9 @@ $gemspec = Gem::Specification.new do |gem|
   gem.platform = Gem::Platform::RUBY
   gem.extensions    = ["ext/libsass/extconf.rb"]
   gem.require_paths = ["lib", "exts"]
-  gem.version       = "0.1"#SassC::VERSION
+  gem.version       = "0.2"#SassC::VERSION
   
   gem.add_dependency('ffi')
   gem.add_dependency('rake-compiler')
+  
 end
